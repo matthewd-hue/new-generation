@@ -1,0 +1,3 @@
+RewriteEngine On
+RewriteCond %{HTTP_HOST} ^newgeneration13.com [NC]
+RewriteRule ^(.*)$ https://www.newgeneration13.com/$1 [L,R=301]
