@@ -7351,7 +7351,7 @@ img.footer-img {
     text-transform: uppercase
 }
 
-h2.section-title-large {
+h1.section-title-large, h2.section-title-large {
     text-transform: uppercase
 }
 
