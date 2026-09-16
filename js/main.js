@@ -203,3 +203,20 @@ setTimeout(function () {
 
 
 })
+/*==============================================================
+ Sticky mobile "Need a quote?" CTA -> scrolls to the quote form,
+ or goes to the request page if this page has no form embed
+ ==============================================================*/
+$(document).ready(function () {
+    var $btn = $('<a href="/request.html" class="ng-sticky-quote-btn" id="ng-sticky-quote-btn">Need a quote?</a>');
+    $('body').append($btn).addClass('ng-has-sticky-cta');
+
+    $btn.on('click', function (e) {
+        var $formTarget = $('#form');
+        if ($formTarget.length) {
+            e.preventDefault();
+            $('html, body').animate({ scrollTop: $formTarget.offset().top - 80 }, 500);
+        }
+        // otherwise let the link naturally go to /request.html
+    });
+});
